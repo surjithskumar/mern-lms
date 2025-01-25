@@ -10,7 +10,13 @@ const port = process.env.PORT;
 
 app.get('/',(req,res)=>{
     res.send("server is working");
-})
+});
+
+//importing routes
+import userRoutes from './routes/user.js'
+
+//using routes
+app.use('/api',userRoutes);
 
 app.listen(5000,()=>{
     console.log(`Server is running at the PORT : ${port}`);
