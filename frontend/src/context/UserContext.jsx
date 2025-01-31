@@ -57,7 +57,7 @@ export const UserContextProvider = ({ children }) => {
     }
 
     async function verifyOtp(otp,navigate) {
-
+        setBtnLoading(true)
         const activationToken = localStorage.getItem("activationToken");
 
         try {
@@ -66,9 +66,10 @@ export const UserContextProvider = ({ children }) => {
            toast.success(data.message);
            navigate('/login');
            localStorage.clear();
+           setBtnLoading(false);
         } catch (error) {
-            setBtnLoading(false);
             toast.error(error.response.data.message);
+            setBtnLoading(false);
         }
     }
 
