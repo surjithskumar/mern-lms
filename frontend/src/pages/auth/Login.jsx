@@ -33,9 +33,12 @@ const Login = () => {
                 <button disabled={btnLoading} type='submit' className='common-btn'>{btnLoading ? "Please Wait..." : "Login" }</button>
             </form>
             <p>Don't have an account? <Link to='/register'>Register</Link> </p>
+            <p>
+              <Link to="/forgot">Forgot Password ?</Link>
+            </p>
         </div>
     </div>
   )
 };
 
-export default Login
+export default Login;
