@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
-import Layout from '../Utils/Layout';
-import axios from 'axios';
-import { server } from '../../main';
-import './dashboard.css'
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Layout from "../Utils/Layout";
+import axios from "axios";
+import { server } from "../../main";
+import "./dashboard.css";
 
-const AdminDashboard = ({ user }) => {
+const AdminDashbord = ({ user }) => {
   const navigate = useNavigate();
 
   if (user && user.role !== "admin") return navigate("/");
 
-  const [stats, setStats] = useState([])
+  const [stats, setStats] = useState([]);
 
   async function fetchStats() {
     try {
@@ -19,6 +19,7 @@ const AdminDashboard = ({ user }) => {
           token: localStorage.getItem("token"),
         },
       });
+
       setStats(data.stats);
     } catch (error) {
       console.log(error);
@@ -28,7 +29,6 @@ const AdminDashboard = ({ user }) => {
   useEffect(() => {
     fetchStats();
   }, []);
-
   return (
     <div>
       <Layout>
@@ -48,7 +48,7 @@ const AdminDashboard = ({ user }) => {
         </div>
       </Layout>
     </div>
-  )
-}
+  );
+};
 
-export default AdminDashboard
+export default AdminDashbord;
