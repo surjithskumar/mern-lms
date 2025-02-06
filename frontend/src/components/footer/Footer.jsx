@@ -8,8 +8,7 @@ const Footer = () => {
       <div className="footer-content">
         <p>
             {/* for copyright symbol */}
-          &copy; 2024 Your E-Learning Platform. All rights reserved. <br /> Made
-          with ❤️ <a href="">Surjith</a>
+          &copy; 2025 Your E-Learning Platform. All rights reserved
         </p> 
         {/* windows + . for symbols */}
         <div className="social-links">

@@ -30,7 +30,7 @@
         a {
           display: flex;
           text-decoration: none;
-          counter-reset: blueviolet;
+          counter-reset: #0d00ff;
   
           span {
             margin-left: 15px;

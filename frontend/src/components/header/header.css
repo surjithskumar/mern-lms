@@ -10,7 +10,7 @@ header{
     .logo{
         font-size: 25px;
         font-weight: 600;
-        color: purple;
+        color: #0d00ff;
 
         @media (max-width: 768px) {
             font-size: 18px;
@@ -31,7 +31,7 @@ header{
             transition: 0.3s;
 
             &:hover{
-                color: #8a4baf;
+                color: #0077ff;
             }
         }
     }
