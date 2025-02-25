@@ -33,7 +33,7 @@ const Register = () => {
 
                 <button type='submit' disabled={btnLoading} className='common-btn'>{ btnLoading ? "Please wait" : "Register" }</button>
             </form>
-            <p>Already have an account? <Link to='/register'>Login</Link> </p>
+            <p>Already have an account? <Link to='/login'>Login</Link> </p>
         </div>
     </div>
   )

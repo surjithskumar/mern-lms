@@ -50,7 +50,7 @@ export const fetchLecture = TryCatch(async(req,res) => {
 
     if(!user.subscription.includes(lecture.course)) 
         return res.status(400).json({
-            message:"You have not subscrobed to this course",
+            message:"You have not subscribed to this course",
     });
 
     res.json({lecture});
